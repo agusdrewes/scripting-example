@@ -49,7 +49,7 @@ sleep 5
 echo "🧪🧐  Fetching user with id 1 from API"
 # Calls the endpoint http://localhost:3000/api/users/1
 response=$(curl -s -X GET http://localhost:3000/api/users/1)
-printf "User found in API: \n$response"
+printf "User found in API: \n$response\n"
 sleep 5
 
 echo "🧪🧐  Fetching user with id 1 from DB"
@@ -62,7 +62,7 @@ if [[ $response == *"User not found"* ]]; then
   echo "User not found"
 else
 # Prints the response and user data
-  printf "User found in DB: \n$user"
+  printf "User found in DB: \n$user\n"
 fi
 sleep 5
 
