@@ -6,7 +6,6 @@
 	"scripts": {
 		"start": "ts-node src/app.ts",
 		"build": "tsc",
-		"migrate": "npx sequelize-cli db:migrate",
 		"dev": "ts-node-dev src/app.ts",
 		"db:migrate": "npx sequelize db:migrate --env development",
 		"db:down:all": "npx sequelize db:migrate:undo:all"
