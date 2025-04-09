@@ -1,5 +1,3 @@
-!/bin/bash
-
 echo "📌⚙️  Starting git repository clone"
 sleep 5
 
@@ -74,15 +72,15 @@ echo "🧪🧐  Checking equality between the DB and API response"
 if [[ "$response" == "$user" ]]; then
     echo "Response and user JSONs are equal"
 else
-    echo "Response and user JSONs are not equal"
+    echo "‼️❌Error: Response and user JSONs are not equal!"
 fi
 sleep 5
 
-
+read -p "Press enter to start cleanup"
 echo "♻️🚮  Cleaning up"
 
 echo "♻️🚮  Stopping the nodejs app"
-kill $app_pid
+ps aux | grep node | grep -v grep | awk '{print $1}' | xargs kill -9
 sleep 5
 
 echo "♻️🚮  Stopping and removing the DB container"
@@ -100,7 +98,7 @@ rm -rf scripting-example
 sleep 5
 
 # Prints a test successful message
-echo "Test successful"
+echo "Script finished"
 
 # Wait for user input before exiting
 read -p "Press enter to exit"
