@@ -72,7 +72,7 @@ echo "🧪🧐  Checking equality between the DB and API response"
 if [[ "$response" == "$user" ]]; then
     echo "Response and user JSONs are equal"
 else
-    echo "‼️❌Error: Response and user JSONs are not equal!"
+    echo "‼️❌  Error: Response and user JSONs are not equal!"
 fi
 sleep 5
 
